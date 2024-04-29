@@ -1,5 +1,3 @@
-![The Go Programming Language](https://raw.githubusercontent.com/unixlinuxgeek/logos/main/ISBN/9780134190570/128x128.png)
-
 ### Упражнение 2.1.
 
 Добавьте в пакет ```tempconv``` типы, константы и функции для работы с температурой по шкале Кельвина,
