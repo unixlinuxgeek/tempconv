@@ -11,7 +11,7 @@ func TestKelvinToC(t *testing.T) {
 	rnd := floatgen.GenRan(1, 9)
 	o := rnd - 273.15
 
-	kc := Kelvin.KToC(Kelvin(rnd))
+	kc := KToC(Kelvin(rnd))
 	c := Celsius(o)
 
 	if kc == c {
