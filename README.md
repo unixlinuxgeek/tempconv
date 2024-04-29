@@ -28,7 +28,7 @@ go get github.com/unixlinuxgeek/tempconv
 
 ##### Шаг 3:
 
-Создаем файл go (например app.go):
+Создаем файл go (например app.go) со следующим содержимым:
 ```go
 package main
 
