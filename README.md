@@ -15,7 +15,7 @@ go mod init abc
 
 Выведет:
 ```
-go: creating new go.mod: module a
+go: creating new go.mod: module abc
 ```
 
 
@@ -69,6 +69,14 @@ $ go run ./app.go 5
 
 ##### Шаг 5 (необязательное)
 
+```shell
+git clone https://github.com/unixlinuxgeek/tenpconv
+```
+
+```shell
+cd tenpconv
+```
+
 ##### Запуск теста с подробным выводом: 
 
 ```bash
@@ -79,8 +87,8 @@ go test -v
 ```shell
 $ go test -v
 === RUN   TestKelvinToC
-    tempconv_test.go:16: Test TestKelvinToC is Passed!!!  2.044943 °K == -271.105057 °C
+    tempconv_test.go:18: Test TestKelvinToC is Passed!!!  8.124322 °K == -265.025678 °C
 --- PASS: TestKelvinToC (0.00s)
 PASS
-ok      a       0.001s
+ok      github.com/unixlinuxgeek/tempconv       0.002s
 ```
