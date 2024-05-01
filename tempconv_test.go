@@ -81,8 +81,7 @@ func TestFahToCel(t *testing.T) {
 	}
 }
 
-// (0°F − 32) × 5/9 + 273.15 = 255.372K
-// Far -> Kel
+// Checking Fahrenheit to Kelvin (FahToKel) converting
 func TestFahToKel(t *testing.T) {
 	rnd := getFltRnd()
 
