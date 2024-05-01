@@ -14,7 +14,7 @@ func TestKelToC(t *testing.T) {
 	rnd := getFltRnd()
 	o := rnd - 273.15
 
-	kc := KToC(Kelvin(rnd))
+	kc := KelToCel(Kelvin(rnd))
 	c := Celsius(o)
 
 	if kc == c {
@@ -30,7 +30,7 @@ func TestCToFar(t *testing.T) {
 
 	f := Fahrenheit((rnd * 9 / 5) + 32)
 
-	cf := CToF(Celsius(rnd))
+	cf := CelToFar(Celsius(rnd))
 	if cf == f {
 		fmt.Fprintf(os.Stdout, "Test Passed!!! %.2f °C equal %.2f °F", rnd, f)
 	} else {
