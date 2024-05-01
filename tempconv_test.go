@@ -9,8 +9,8 @@ import (
 	"testing"
 )
 
-// Checking  Kelvin to Celsius (KelToC) converting
-func TestKelToC(t *testing.T) {
+// Checking  Kelvin to Celsius (KelToCel) converting
+func TestKelToCel(t *testing.T) {
 	rnd := getFltRnd()
 	o := rnd - 273.15
 
@@ -24,8 +24,8 @@ func TestKelToC(t *testing.T) {
 	}
 }
 
-// Checking Celsius to Fahrenheit (CToF) converting
-func TestCToFar(t *testing.T) {
+// Checking Celsius to Fahrenheit (CelToFah) converting
+func TestCelToFar(t *testing.T) {
 	rnd := getFltRnd()
 
 	f := Fahrenheit((rnd * 9 / 5) + 32)
@@ -38,7 +38,21 @@ func TestCToFar(t *testing.T) {
 	}
 }
 
-// Generation random value from 1 to 9
+func TestFahToCel(t *testing.T) {
+	rnd := getFltRnd()
+	f := Fahrenheit(rnd)
+
+	// converting Fahrenheit to Celsius formula
+	fToc := Celsius((f - 32) * 5 / 9)
+
+	if fToc == FahToCel(Fahrenheit(rnd)) {
+		fmt.Fprintf(os.Stdout, "Test Passed!!! %.2f °F equal %.2f °C", rnd, fToc)
+	} else {
+		fmt.Fprintf(os.Stdout, "Test Failed: %.2f °F not equal %.2f.2 °C", rnd, fToc)
+	}
+}
+
+// Generation random value from 1 to 9 (without zero!!!)
 func getFltRnd() float64 {
 	return floatgen.GenRan(1, 9)
 }
