@@ -6,7 +6,7 @@ func CelToFar(c Celsius) Fahrenheit {
 }
 
 // CellToKel преобразует температуру по Цельсию в температуру по Кельвину
-func CellToKel(c Celsius) Kelvin {
+func CelToKel(c Celsius) Kelvin {
 	return Kelvin(c + 273.15)
 }
 
@@ -25,7 +25,7 @@ func KelToCel(k Kelvin) Celsius {
 	return Celsius(k - 273.15)
 }
 
-// KelToFar преобразует температуру по Кельвину в температуру по Фаренгейту
-func KelToFar(k Kelvin) Fahrenheit {
+// KelToFah преобразует температуру по Кельвину в температуру по Фаренгейту
+func KelToFah(k Kelvin) Fahrenheit {
 	return Fahrenheit((k-273.15)*9/5 + 32)
 }
