@@ -38,6 +38,7 @@ func TestCelToFar(t *testing.T) {
 	}
 }
 
+// Checking Fahrenheit to Celsius (FahToCel) converting
 func TestFahToCel(t *testing.T) {
 	rnd := getFltRnd()
 	f := Fahrenheit(rnd)
