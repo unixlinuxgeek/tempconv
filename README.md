@@ -86,25 +86,23 @@ go test -v
 `Увидим` что то похожее на это:
 ```shell
 $ go test -v
-=== RUN   TestKelToCel
-    tempconv_test.go:19: Test TestKelToCel is Passed!!!  5.13 °K equal -268.02 °C
+    tempconv_test.go:19: Test TestKelToCel is Passed!!!  3.46 °K equal -269.69 °C
 --- PASS: TestKelToCel (0.00s)
 === RUN   TestKelToFah
-    tempconv_test.go:34: Test TestKelToFah is Passed!!!  3.89 °K equal -452.67 °F
+    tempconv_test.go:34: Test TestKelToFah is Passed!!!  1.08 °K equal -457.73 °F
 --- PASS: TestKelToFah (0.00s)
 === RUN   TestCelToFah
-    tempconv_test.go:48: Test TestCelToFah is Passed!!! 1.36 °C equal 34.45 °F
+    tempconv_test.go:48: Test TestCelToFah is Passed!!! 5.13 °C equal 41.24 °F
 --- PASS: TestCelToFah (0.00s)
 === RUN   TestCelToKel
-    tempconv_test.go:61: Test TestCelToKel is Passed!!! 8.90 °C equal 282.05 °K
---- FAIL: TestCelToKel (0.00s)
+    tempconv_test.go:61: Test TestCelToKel is Passed!!! 6.68 °C equal 279.83 °K
+--- PASS: TestCelToKel (0.00s)
 === RUN   TestFahToCel
-    tempconv_test.go:76: Test TestFahToCel is Passed!!! 5.63 °F equal -14.65 °C
+    tempconv_test.go:76: Test TestFahToCel is Passed!!! 5.86 °F equal -14.52 °C
 --- PASS: TestFahToCel (0.00s)
 === RUN   TestFahToKel
-    tempconv_test.go:90: Test TestFahToKel is Passed!!! 6.79 °F equal 259.14 °K
+    tempconv_test.go:90: Test TestFahToKel is Passed!!! 7.50 °F equal 259.54 °K
 --- PASS: TestFahToKel (0.00s)
-FAIL
-exit status 1
-FAIL    github.com/unixlinuxgeek/tempconv       0.002s
+PASS
+ok      github.com/unixlinuxgeek/tempconv       0.002s
 ```
