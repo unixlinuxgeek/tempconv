@@ -83,7 +83,7 @@ cd tenpconv
 go test -v
 ```
 
-`Увидим` что то похожее на это:
+Увидим что то похожее на это:
 ```shell
 $ go test -v
     tempconv_test.go:19: Test TestKelToCel is Passed!!!  3.46 °K equal -269.69 °C
