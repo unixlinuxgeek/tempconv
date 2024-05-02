@@ -22,7 +22,7 @@ func TestKelToCel(t *testing.T) {
 	}
 }
 
-// Kel -> Fah
+// Checking Kelvin to Fahrenheit (KelToFah) converting
 func TestKelToFah(t *testing.T) {
 	rnd := getFltRnd()
 	o := (rnd-273.15)*9/5 + 32
