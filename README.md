@@ -106,3 +106,54 @@ $ go test -v
 PASS
 ok      github.com/unixlinuxgeek/tempconv       0.002s
 ```
+
+
+Использование модуля ```tempconv```:
+
+```shell
+package main
+
+import(
+  "fmt"
+  "os" 
+  "github.com/unixlinuxgeek/tempconv"
+  "strconv"
+)
+
+func main() {
+  if len(os.Args) > 1 {
+  
+    arg, _ := strconv.Atoi(os.Args[1])
+  
+    kToC := tempconv.KelToCel(tempconv.Kelvin(float64(arg)))
+    fmt.Printf("KelToCel = %.2f\n", kToC)
+    kToF := tempconv.KelToFah(tempconv.Kelvin(float64(arg)))
+    fmt.Printf("KelToFah = %.2f\n", kToF)
+  
+    cToF := tempconv.CelToFah(tempconv.Celsius(float64(arg)))
+    cToK := tempconv.CelToKel(tempconv.Celsius(float64(arg)))
+    fmt.Printf("CelToFah = %.2f\n", cToF)
+    fmt.Printf("CelToKel = %.2f\n", cToK)
+  
+    fToK := tempconv.FahToKel(tempconv.Fahrenheit(float64(arg)))
+    fToC := tempconv.FahToCel(tempconv.Fahrenheit(float64(arg)))
+    fmt.Printf("FahToKel = %.2f\n", fToK)
+    fmt.Printf("FahToCel = %.2f\n", fToC)
+  
+  }
+  
+}
+```
+
+Выведет (запускаем с аргументом 1)
+```
+$ go run ./app.go 1
+
+KelToCel = -272.15
+KelToFah = -457.87
+CelToFah = 33.80
+CelToKel = 274.15
+FahToKel = 255.93
+FahToCel = -17.22
+
+```
