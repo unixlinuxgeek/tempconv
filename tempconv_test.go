@@ -18,9 +18,9 @@ func TestKelToCel(t *testing.T) {
 	c := Celsius(o)
 
 	if kc == c {
-		t.Logf("Test TestKelvinToC is Passed!!!  %.2f °K == %.2f °C", rnd, o)
+		t.Logf("Test TestKelToC is Passed!!!  %.2f °K == %.2f °C", rnd, o)
 	} else {
-		t.Fatal("Test TestKelvinToC Not Passed")
+		t.Fatal("Test TestKelToC Not Passed")
 	}
 }
 
@@ -46,7 +46,7 @@ func TestCelToFah(t *testing.T) {
 
 	f := Fahrenheit((rnd * 9 / 5) + 32)
 
-	cf := CelToFar(Celsius(rnd))
+	cf := CelToFah(Celsius(rnd))
 	if cf == f {
 		fmt.Fprintf(os.Stdout, "Test Passed!!! %.2f °C equal %.2f °F", rnd, f)
 	} else {
