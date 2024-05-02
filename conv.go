@@ -1,7 +1,7 @@
 package tempconv
 
-// CelToFar преобразует температуру по Цельсию в температуру по Фаренгейту.
-func CelToFar(c Celsius) Fahrenheit {
+// CelToFah преобразует температуру по Цельсию в температуру по Фаренгейту.
+func CelToFah(c Celsius) Fahrenheit {
 	return Fahrenheit(c*9/5 + 32)
 }
 
