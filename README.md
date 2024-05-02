@@ -21,7 +21,7 @@ go: creating new go.mod: module abc
 
 #### Шаг 2:
 
-Устанавливаем нашу библитеку:
+Устанавливаем наш модуль:
 ```shell
 go get github.com/unixlinuxgeek/tempconv
 ```
