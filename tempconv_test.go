@@ -18,9 +18,9 @@ func TestKelToCel(t *testing.T) {
 	c := Celsius(o)
 
 	if kc == c {
-		t.Logf("Test TestKelToC is Passed!!!  %.2f °K == %.2f °C", rnd, o)
+		t.Logf("Test TestKelToCel is Passed!!!  %.2f °K == %.2f °C\n", rnd, o)
 	} else {
-		t.Fatal("Test TestKelToC Not Passed")
+		t.Fatalf("Test TestKelToCel Failed: %.2f °K  not equal %.2f °C \n", rnd, o)
 	}
 }
 
@@ -47,9 +47,9 @@ func TestCelToFah(t *testing.T) {
 
 	cf := CelToFah(Celsius(rnd))
 	if cf == f {
-		fmt.Fprintf(os.Stdout, "Test Passed!!! %.2f °C equal %.2f °F", rnd, f)
+		fmt.Fprintf(os.Stdout, "Test Passed!!! %.2f °C equal %.2f °F\n", rnd, f)
 	} else {
-		t.Fatalf("Test Failed: %.2f °C not equal %f.2 °F", rnd, f)
+		t.Fatalf("Test Failed: %.2f °C not equal %f.2 °F\n", rnd, f)
 	}
 }
 
@@ -60,9 +60,9 @@ func TestCelToKel(t *testing.T) {
 	ck := CelToKel(Celsius(rnd))
 
 	if k == ck {
-		fmt.Fprintf(os.Stdout, "Test Passed!!! %.2f °C equal %.2f °K", rnd, k)
+		fmt.Fprintf(os.Stdout, "Test Passed!!! %.2f °C equal %.2f °K\n", rnd, k)
 	} else {
-		t.Fatalf("Test Failed: %.2f °C not equal %f.2 °K", rnd, k)
+		t.Fatalf("Test Failed: %.2f °C not equal %f.2 °K\n", rnd, k)
 	}
 }
 
@@ -75,9 +75,9 @@ func TestFahToCel(t *testing.T) {
 	fToC := Celsius((f - 32) * 5 / 9)
 
 	if fToC == FahToCel(Fahrenheit(rnd)) {
-		fmt.Fprintf(os.Stdout, "Test Passed!!! %.2f °F equal %.2f °C", rnd, fToC)
+		fmt.Fprintf(os.Stdout, "Test Passed!!! %.2f °F equal %.2f °C\n", rnd, fToC)
 	} else {
-		t.Fatalf("Test Failed: %.2f °F not equal %.2f.2 °C", rnd, fToC)
+		t.Fatalf("Test Failed: %.2f °F not equal %.2f.2 °C\n", rnd, fToC)
 	}
 }
 
@@ -91,7 +91,7 @@ func TestFahToKel(t *testing.T) {
 	if k == FahToKel(Fahrenheit(rnd)) {
 
 	} else {
-		t.Fatalf("Test Failed: %.2f °F not equal %.2f °K", rnd, k)
+		t.Fatalf("Test Failed: %.2f °F not equal %.2f °K\n", rnd, k)
 	}
 }
 
