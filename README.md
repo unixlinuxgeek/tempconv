@@ -87,22 +87,24 @@ go test -v
 ```shell
 $ go test -v
 === RUN   TestKelToCel
-    tempconv_test.go:21: Test TestKelToCel is Passed!!!  2.29 °K == -270.86 °C
+    tempconv_test.go:19: Test TestKelToCel is Passed!!!  5.13 °K equal -268.02 °C
 --- PASS: TestKelToCel (0.00s)
 === RUN   TestKelToFah
-    tempconv_test.go:36: Test TestKelToFah is Passed!!!  4.69 °K == -451.23 °F
+    tempconv_test.go:34: Test TestKelToFah is Passed!!!  3.89 °K equal -452.67 °F
 --- PASS: TestKelToFah (0.00s)
 === RUN   TestCelToFah
-Test Passed!!! 6.57 °C equal 43.82 °F
+    tempconv_test.go:48: Test TestCelToFah is Passed!!! 1.36 °C equal 34.45 °F
 --- PASS: TestCelToFah (0.00s)
 === RUN   TestCelToKel
-Test Passed!!! 8.65 °C equal 281.80 °K
---- PASS: TestCelToKel (0.00s)
+    tempconv_test.go:61: Test TestCelToKel is Passed!!! 8.90 °C equal 282.05 °K
+--- FAIL: TestCelToKel (0.00s)
 === RUN   TestFahToCel
-Test Passed!!! 4.53 °F equal -15.26 °C
+    tempconv_test.go:76: Test TestFahToCel is Passed!!! 5.63 °F equal -14.65 °C
 --- PASS: TestFahToCel (0.00s)
 === RUN   TestFahToKel
+    tempconv_test.go:90: Test TestFahToKel is Passed!!! 6.79 °F equal 259.14 °K
 --- PASS: TestFahToKel (0.00s)
-PASS
-ok      github.com/unixlinuxgeek/tempconv       0.002s
+FAIL
+exit status 1
+FAIL    github.com/unixlinuxgeek/tempconv       0.002s
 ```
