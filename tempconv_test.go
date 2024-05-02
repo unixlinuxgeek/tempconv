@@ -58,7 +58,7 @@ func TestCelToKel(t *testing.T) {
 	ck := CelToKel(Celsius(rnd))
 
 	if k == ck {
-		t.Fatalf("Test TestCelToKel is Passed!!! %.2f °C equal %.2f °K\n", rnd, k)
+		t.Logf("Test TestCelToKel is Passed!!! %.2f °C equal %.2f °K\n", rnd, k)
 	} else {
 		t.Fatalf("Test TestCelToKel is Failed: %.2f °C not equal %f.2 °K\n", rnd, k)
 	}
