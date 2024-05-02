@@ -45,7 +45,7 @@ func main() {
 		if err != nil {
 			os.Exit(1)
 		}
-		c := tempconv.FToC(tempconv.Fahrenheit(temp))
+		c := tempconv.FahToCel(tempconv.Fahrenheit(temp))
 		fmt.Fprintf(os.Stdout, "%d градуса Фаренгейта равно %.2f градусов по Цельсию\n", temp, c)
 	} else {
 		fmt.Println("Не зедан аргумент!!!")
