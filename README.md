@@ -83,12 +83,26 @@ cd tenpconv
 go test -v
 ```
 
-Увидим что то похожее на это:
+`Увидим` что то похожее на это:
 ```shell
 $ go test -v
-=== RUN   TestKelvinToC
-    tempconv_test.go:18: Test TestKelvinToC is Passed!!!  8.124322 °K == -265.025678 °C
---- PASS: TestKelvinToC (0.00s)
+=== RUN   TestKelToCel
+    tempconv_test.go:21: Test TestKelToCel is Passed!!!  2.29 °K == -270.86 °C
+--- PASS: TestKelToCel (0.00s)
+=== RUN   TestKelToFah
+    tempconv_test.go:36: Test TestKelToFah is Passed!!!  4.69 °K == -451.23 °F
+--- PASS: TestKelToFah (0.00s)
+=== RUN   TestCelToFah
+Test Passed!!! 6.57 °C equal 43.82 °F
+--- PASS: TestCelToFah (0.00s)
+=== RUN   TestCelToKel
+Test Passed!!! 8.65 °C equal 281.80 °K
+--- PASS: TestCelToKel (0.00s)
+=== RUN   TestFahToCel
+Test Passed!!! 4.53 °F equal -15.26 °C
+--- PASS: TestFahToCel (0.00s)
+=== RUN   TestFahToKel
+--- PASS: TestFahToKel (0.00s)
 PASS
 ok      github.com/unixlinuxgeek/tempconv       0.002s
 ```
