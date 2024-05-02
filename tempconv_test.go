@@ -25,7 +25,6 @@ func TestKelToCel(t *testing.T) {
 }
 
 // Kel -> Fah
-// (32K − 273.15) × 9/5 + 32 = -402.1°F
 func TestKelToFah(t *testing.T) {
 	rnd := getFltRnd()
 	o := (rnd-273.15)*9/5 + 32
@@ -57,8 +56,9 @@ func TestCelToFah(t *testing.T) {
 // Checking Celsius to Kelvin (CelToKel) converting
 func TestCelToKel(t *testing.T) {
 	rnd := getFltRnd()
-	k := Kelvin((rnd-273.15)*9/5 + 32)
+	k := Kelvin(rnd + 273.15)
 	ck := CelToKel(Celsius(rnd))
+
 	if k == ck {
 		fmt.Fprintf(os.Stdout, "Test Passed!!! %.2f °C equal %.2f °K", rnd, k)
 	} else {
