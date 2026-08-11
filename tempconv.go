@@ -17,5 +17,5 @@ func (c Celsius) String() string {
 }
 
 func (f Fahrenheit) String() string {
-	return fmt.Sprintf("%g°F")
+	return fmt.Sprintf("%g°F", f)
 }
